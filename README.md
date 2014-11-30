@@ -5,10 +5,11 @@ foodprint-calc
 
 ## TODO
 + Get data needed
-+	a) co2 per kg(?) of foods
++	a) co2 per kg of foods
 +	b) recipes (20 main, 20 lunch, 10 breakfast, 20 snacks, drinks?) and quantities
-+ decide best system to store info so calculations will work
-+ language? If purely personal then c++ works for me in XCode, although how to select diet combo without writing input file, or ~35 command line inputs? Javascript may be better for interactive, web interface system? 
++ Need more comprehensive list of foods, and consistent data set e.g. transport etc left out, or appropriate to a specific location. 
++ decide best system to store info so calculations will work - separate into food groups to make searches faster? Would speed up array searches but need to include method to tell function which food arrays to search based on recipe contents…
++ language? JavaScript for now…
 
 ## Links
 + Treehugger [plot](http://www.treehugger.com/green-food/meat-eaters-guide-get-to-know-the-carbon-footprint-of-your-diet-lamb-beef-cheese-are-the-worst.html)
@@ -21,6 +22,4 @@ foodprint-calc
 
 ## Issues
 - do for my portion sizes for now?
-- seasonal/geography issues? i.e. include food miles or just focus on production emissions? Would make big difference to e.g. [rice](http://en.wikipedia.org/wiki/Rice#Production), [sugar](http://en.wikipedia.org/wiki/Sugarcane#Production)…, and add dependence on user location. Do for UK user for now…
-
-
+- seasonal/geography issues? i.e. include food miles or just focus on production emissions? Would make big difference to e.g. [rice](http://en.wikipedia.org/wiki/Rice#Production), [sugar](http://en.wikipedia.org/wiki/Sugarcane#Production)… For now, include transport, processing etc as can only get data with processing included. Future - needs to be location based… perhaps add property to food objects so can separate production costs (will also vary my technique though so location dependent too) and transport costs.
