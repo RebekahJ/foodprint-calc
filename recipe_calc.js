@@ -1,3 +1,4 @@
+// EWG data
 var data = [];
 data.push( { food: 'beef', epkg: 39.2 } );
 data.push( { food: 'lamb', epkg: 27.0 } );
@@ -20,28 +21,48 @@ data.push( { food: 'milk', epkg: 1.9 } );
 data.push( { food: 'tomatoes', epkg: 1.1 } );
 data.push( { food: 'lentils', epkg: 0.9 } );
 
+/**
+* FUNCTION: emsCalc( recipe )
+*	Calculates the emissions of a meal based on a recipe's ingredients
+*
+* @param {Array} recipe - array of objects { ing: {String}, qug: {Number} }
+* @returns {Number} emissions in kg
+*/
+function emsCalc( recipe ) {
+	
+	var emtot = 0;
+
+	// loop over recipe entries
+	for ( var i = 0; i < recipe.length; i++ ) {
+
+		// loop over possible ingredients
+		for ( var j = 0; j < data.length; j++ ) {
+
+			// if string matches, ing present in recipe, get carb contribution
+			if ( recipe[i].ing === data[j].food ) {
+				emtot += ( 0.001 * recipe[i].qug ) * data[j].epkg ;
+				break; // skip to next recipe ingredient once current has been matched
+			}
+		} // end ing loop
+	} // end recipe loop
+
+	return emtot;
+} // end calc function
+
 // recipe stores ingredients and quantities in g
 var rec1 = [];
 rec1.push( { ing: "chicken", qug: 100 } );
 rec1.push( { ing: "rice", qug: 75 } );
 
-var ems1 = 0;
+var rec2 = [];
+rec2.push( { ing: "cheese", qug: 50 } );
+rec2.push( { ing: "rice", qug: 75 } );
 
-// loop over recipe entries
-for ( var i = 0; i < rec1.length; i++ ) {
+var ems1 = emsCalc( rec1 );
+var ems2 = emsCalc( rec2 );
 
-	// loop over possible ingredients
-	for ( var j = 0; j < data.length; j++ ) {
-
-		// if string matches, ing present in recipe, get carb contribution
-		if ( rec1[i].ing === data[j].food ) {
-			ems1 += ( 0.001 * rec1[i].qug ) * data[j].epkg ;
-			break;
-		}
-	} // end ing loop
-} // end recipe loop
-
-console.log( "total emissions in kg is: " + ems1 );
+console.log( "rec1 total emissions in kg is: " + ems1 );
+console.log( "rec2 total emissions in kg is: " + ems2 );
 
 
 
