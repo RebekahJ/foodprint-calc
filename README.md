@@ -10,6 +10,9 @@ foodprint-calc
 + Need more comprehensive list of foods, and consistent data set e.g. transport etc left out, or appropriate to a specific location. 
 + decide best system to store info so calculations will work - separate into food groups to make searches faster? Would speed up array searches but need to include method to tell function which food arrays to search based on recipe contents…
 + language? JavaScript for now…
++ Add input method
++ 	a) command line input of recipes (would need correct spelling for string matching so select from list of available ingredients)
++ 	b) website for selection of ingredients - scroll through options, click ingredients, specify quantities
 
 ## Links
 + Treehugger [plot](http://www.treehugger.com/green-food/meat-eaters-guide-get-to-know-the-carbon-footprint-of-your-diet-lamb-beef-cheese-are-the-worst.html)
