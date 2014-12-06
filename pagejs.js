@@ -1,3 +1,6 @@
 $('.ingredient').click(function() {
-  $(this).toggleClass('active');
+	// show ingredient is selected
+	$(this).toggleClass('active');
+  	// display ingredient on right
+  	
 });
