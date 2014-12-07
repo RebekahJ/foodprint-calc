@@ -4,15 +4,15 @@ foodprint-calc
 > Compare carbon foodprint of various custom diet plans
 
 ## TODO
-+ Get data needed
++ Complete input method - allow ingredients to be searched, selected, displayed, quantities added and total emissions displayed.
++ Allow up to 5 meals to be added and displayed at once (also allow meals to be selected and edited later)
++ Make pretty! 
+
++ Get additional data needed
 +	a) co2 per kg of foods
 +	b) recipes (20 main, 20 lunch, 10 breakfast, 20 snacks, drinks?) and quantities
 + Need more comprehensive list of foods, and consistent data set e.g. transport etc left out, or appropriate to a specific location. 
 + decide best system to store info so calculations will work - separate into food groups to make searches faster? Would speed up array searches but need to include method to tell function which food arrays to search based on recipe contents…
-+ language? JavaScript for now…
-+ Add input method
-+ 	a) command line input of recipes (would need correct spelling for string matching so select from list of available ingredients)
-+ 	b) website for selection of ingredients - scroll through options, click ingredients, specify quantities
 
 ## Links
 + Treehugger [plot](http://www.treehugger.com/green-food/meat-eaters-guide-get-to-know-the-carbon-footprint-of-your-diet-lamb-beef-cheese-are-the-worst.html)
