@@ -6,10 +6,16 @@
 	color: #fff;
 }
 
-.row {
+.p {
+	color: #fff;
+}
+
+.row p {
 	color: #fff;
 }
 
 .active {
-	color: ;
+	background-color: green;
 }
+
+
