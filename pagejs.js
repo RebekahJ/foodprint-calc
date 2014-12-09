@@ -11,6 +11,11 @@ var main = function() {
     	$('.dropdown-menu').toggle();
   	});
 
+
+	$('.chocolate').click(function() {
+  		$('<li>').text('New ingredient').appendTo('.ings');
+	});
+
 }
 
 $(document).ready(main);
