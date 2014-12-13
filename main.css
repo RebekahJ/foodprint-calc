@@ -1,9 +1,14 @@
-.titles {
-	height: 300px;
+.nav {
+	color: #fff;
+	background-color: black
 }
 
-.checkbox {
-	color: #fff;
+.nav li {
+    display: inline;
+    font-size: 30px;
+  	font-weight: bold;
+  	padding: 0px;
+  	text-transform: uppercase;
 }
 
 p {

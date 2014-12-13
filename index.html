@@ -8,19 +8,35 @@
 	</head>
 
 	<body background="./images/wood_back1.jpg">
-		<h1><center> Basic page to test foodprint calculator. </center></h1>
 
-    <div class="container">
-    	<p>My meal is called:</p>
-    		<div id="meal-name">
-				<input type="text" id="mymeal" />
-			</div>
+	<div class="nav">
+    	<div class="container">
+        	<ul class="pull-left">
+          		<li>Basic Foodprint Calculator</li>
+        	</ul>
+        	<ul class="pull-right">
+          		<li><a href="#">About</a></li>
+          		<li><a href="#">Help</a></li>
+        	</ul>
+      	</div>
+    </div>	
+
+    <div class="instructions">
+    	<div class="container">
+    		<p>Provide a name for your meal:</p>
+    			<div id="meal-name">
+					<input type="text" id="mymeal" />
+				</div>
+		</div>	
     </div>
 
- 	<div class="container">
-    	<p> Construct meal1 recipe from ingredients and calculate emissions.</p>
+ 	<div class="calculator">
+ 		<div class="container">
+    		<p> Construct mymeal recipe from ingredients and calculate emissions.</p>
+
   			<div class="row">
-    			<div class="col-sm-6" style="background-color:#2835BF;">
+
+    			<div class="col-sm-6" style="background-color:#191970;">
       				<p>Select ingredients</p>
       				<div class="ing-buttons">
                 		<div class="container">
@@ -53,28 +69,29 @@
                 			<div class="btn-group" role="group" aria-label="...">
 								<button type="button" class="btn btn-default">Tomato</button>
                 			</div>	
-                		<p>Grains</p>
-                			<div class="btn-group" role="group" aria-label="...">
+               			<p>Grains</p>
+               				<div class="btn-group" role="group" aria-label="...">
 								<button type="button" class="btn btn-default">Rice</button>
                 			</div>	
-                		<p>Pulses</p>
-                			<div class="btn-group" role="group" aria-label="...">
+               			<p>Pulses</p>
+               				<div class="btn-group" role="group" aria-label="...">
 								<button type="button" class="btn btn-default">Dry beans</button>
 								<button type="button" class="btn btn-default">Lentils</button>
-                			</div>	
-                		<p>Nuts</p>
-                			<div class="btn-group" role="group" aria-label="...">
+               				</div>	
+               			<p>Nuts</p>
+               				<div class="btn-group" role="group" aria-label="...">
 								<button type="button" class="btn btn-default">Peanut Butter</button>
 								<button type="button" class="btn btn-default">Nuts</button>
-                			</div>	
-                		<p>Misc protein</p>
-                			<div class="btn-group" role="group" aria-label="...">
+               				</div>	
+               			<p>Misc protein</p>
+               				<div class="btn-group" role="group" aria-label="...">
 								<button type="button" class="btn btn-default">Tofu</button>
-                			</div>	
+               				</div>	
                 		</div>
                 	</div>
     			</div>
-    			<div class="col-sm-6" style="background-color:#66CCFF;">
+
+    			<div class="col-sm-6" style="background-color:#008B8B;">
       				<p>Display ingredients, add quantites</p>
       				<div class="recipe">
       					<ul class="ings">
@@ -85,8 +102,10 @@
       				<br>
       				<p> Total emissions per serving: </p> 
     			</div>
+
   			</div>
-		</div>
+  		</div>
+	</div>
 
 	<!-- scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
