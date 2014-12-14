@@ -1,21 +1,13 @@
 var main = function() {
 
-	$('.list').click(function() {
+	$('.btn').click(function() {
+		alert( "Handler for .click() called." );
 		// show ingredient is selected
-		$(button).toggleClass('active');
+		$(this).toggleClass('active');
   		// display ingredient on right
-  	
-	});
-
-	$('.dropdown-toggle').click(function() {
-    	$('.dropdown-menu').toggle();
-  	});
-
-
-	$('.chocolate').click(function() {
   		$('<li>').text('New ingredient').appendTo('.ings');
 	});
 
-}
+};
 
 $(document).ready(main);

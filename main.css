@@ -5,7 +5,7 @@
 
 .nav li {
     display: inline;
-    font-size: 30px;
+    font-size: 35px;
   	font-weight: bold;
   	padding: 0px;
   	text-transform: uppercase;
@@ -16,7 +16,7 @@ p {
 }
 
 .active {
-	background-color: green;
+	color: green;
 }
 
 
