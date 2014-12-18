@@ -54,6 +54,7 @@ function emsCalc( recipe ) {
 	return emtot;
 } // end calc function
 
+
 /** EVENT HANDLERS **/
 
 var main = function() {
@@ -69,8 +70,7 @@ var main = function() {
         	event.preventDefault();
         	$("form").submit();
 
-        	// get variables recipe name
-
+        	// get recipe name
 
         	// create array to hold recipe
         	var recipe1 = [];
@@ -80,12 +80,13 @@ var main = function() {
     	}
 	});
 
-	$('.btn-in').click(function() {
+	$('.btn-ing').click(function() {
 
 		// show ingredient has been included:
 		$(this).toggleClass('active');
 
-		var quant = prompt("Please enter a quantity of " + this.id + " in g:", 0);
+		var quant_str = prompt("Please enter a quantity of " + this.id + " in g:", 0);
+		var quant = parseInt(quant_str, 10);
 
 		// If quantity provided is not a number, ask again until quantity is numeric:
 		/*if (typeof quant !== number || quant !== quant) {
@@ -97,6 +98,7 @@ var main = function() {
 
   		// add ingredient and quantity to recipe array
   		recipe1.push( { ing: this.id, qug: quant} );
+
 	});
 
 	$('.btn-go').click(function() {
