@@ -86,18 +86,24 @@ var main = function() {
 		$(this).toggleClass('active');
 
 		var quant_str = prompt("Please enter a quantity of " + this.id + " in g:", 0);
-		var quant = parseInt(quant_str, 10);
+		//var quant = parseInt(quant_str, 10); // no good if typo in input number
+		var quant = Number(quant_str); // Returns NaN if any non-numeric characters present
 
-		// If quantity provided is not a number, ask again until quantity is numeric:
+		//If quantity provided is not a number, ask again until quantity is numeric:
 		/*if (typeof quant !== number || quant !== quant) {
 			quant = prompt(" Please enter a number of grams:", 0);
 		}*/
 
-  		// display ingredient on right
-  		$('<li>').text(this.id + " " + quant + " g").appendTo('.ings');
+		if ( typeof quant === 'number' && quant === quant ) {
+  			// display ingredient on right
+  			$('<li>').text(this.id + " " + quant + " g").appendTo('.ings');
 
-  		// add ingredient and quantity to recipe array
-  		recipe1.push( { ing: this.id, qug: quant} );
+  			// add ingredient and quantity to recipe array
+  			recipe1.push( { ing: this.id, qug: quant} );
+  		}
+  		else {
+  			alert("Invalid input. Please enter a number.")
+  		}
 
 	});
 
