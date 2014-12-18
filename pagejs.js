@@ -1,4 +1,4 @@
-/** Data **/
+/** DATA **/
 // Put in separate file?
 
 // EWG data
@@ -24,7 +24,37 @@ data.push( { food: 'Milk', epkg: 1.9 } );
 data.push( { food: 'Tomatoes', epkg: 1.1 } );
 data.push( { food: 'Lentils', epkg: 0.9 } );
 
-/** Functions **/
+/** FUNCTIONS **/
+
+/**
+* FUNCTION: emsCalc( recipe )
+*	Calculates the emissions of a meal based on a recipe's ingredients
+*
+* @param {Array} recipe - array of objects { ing: {String}, qug: {Number} }
+* @returns {Number} emissions in kg
+*/
+function emsCalc( recipe ) {
+	
+	var emtot = 0;
+
+	// loop over recipe entries
+	for ( var i = 0; i < recipe.length; i++ ) {
+
+		// loop over possible ingredients
+		for ( var j = 0; j < data.length; j++ ) {
+
+			// if string matches, ing present in recipe, get carb contribution
+			if ( recipe[i].ing === data[j].food ) {
+				emtot += ( 0.001 * recipe[i].qug ) * data[j].epkg ;
+				break; // skip to next recipe ingredient once current has been matched
+			}
+		} // end ing loop
+	} // end recipe loop
+
+	return emtot;
+} // end calc function
+
+/** EVENT HANDLERS **/
 
 var main = function() {
 
@@ -76,11 +106,10 @@ var main = function() {
 		}
 		else {
 		// calculate emissions:
-
-		//copy from recipe_calc.js
+		var totems = emsCalc( recipe1 );
 
 		// print result
-		$('<p>').text("Total emissions: ").appendTo('.result');
+		$('<p>').text("Total emissions: " + totems + " kg").appendTo('.result');
 		}
 
 	})
