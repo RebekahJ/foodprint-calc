@@ -57,6 +57,9 @@ function emsCalc( recipe ) {
 
 /** EVENT HANDLERS **/
 
+// Monitor if first calculation or amended recipe
+var firstcalc = true;
+
 var main = function() {
 
 	// temp here until name form is working (then will happen in function on enter)
@@ -113,11 +116,17 @@ var main = function() {
 			alert("Please select some ingredients.");
 		}
 		else {
-		// calculate emissions:
-		var totems = emsCalc( recipe1 );
+			// calculate emissions:
+			var totems = emsCalc( recipe1 );
 
-		// print result
-		$('<p>').text("Total emissions: " + totems + " kg").appendTo('.result');
+			if ( firstcalc ) {
+				// print result
+				$('<p class="ems">').text("Total emissions: " + totems + " kg").appendTo('.result');
+				firstcalc = false;
+			}
+			else {
+				//$('p.ems').replaceWith("<p class="ems">"Total emissions: " + totems + " kg"</p>");
+			}
 		}
 
 	})
