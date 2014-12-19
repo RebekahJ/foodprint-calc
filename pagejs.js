@@ -65,7 +65,8 @@ var main = function() {
 	// temp here until name form is working (then will happen in function on enter)
 	var recipe1 = [];
 
-	// get recipe name
+/*
+	// get recipe name (FINISH!)
 	$(".get-name").keypress(function(event) {
 
 		// Create array and print instructions once recipe name has been entered (FIX!)
@@ -82,6 +83,7 @@ var main = function() {
         	$('<p>').text("Select ingredients for " + myrecipe + " from the list below and add quantities (in grams) when prompted:").appendTo(".instructions");
     	}
 	});
+*/
 
 	$('.btn-ing').click(function() {
 
@@ -89,13 +91,9 @@ var main = function() {
 		$(this).toggleClass('active');
 
 		var quant_str = prompt("Please enter a quantity of " + this.id + " in g:", 0);
+
 		//var quant = parseInt(quant_str, 10); // no good if typo in input number
 		var quant = Number(quant_str); // Returns NaN if any non-numeric characters present
-
-		//If quantity provided is not a number, ask again until quantity is numeric:
-		/*if (typeof quant !== number || quant !== quant) {
-			quant = prompt(" Please enter a number of grams:", 0);
-		}*/
 
 		if ( typeof quant === 'number' && quant === quant ) {
   			// display ingredient on right
@@ -126,6 +124,8 @@ var main = function() {
 			}
 			else {
 				//$('p.ems').replaceWith("<p class="ems">"Total emissions: " + totems + " kg"</p>");
+				$(".result").empty();
+				$('<p class="ems">').text("Total emissions: " + totems + " kg").appendTo('.result');
 			}
 		}
 

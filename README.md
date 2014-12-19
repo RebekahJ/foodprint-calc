@@ -6,9 +6,10 @@ foodprint-calc
 ## TODO
 ####Short
 + make form take recipe name
-+ in case of adding additional ingredients, replace emissions result (instead of printing another under previous)
++ in case of adding additional ingredients, either a)remove result line as soon as new ing added (so user can see they should recalculate) b) change “Go!” to “Recalculate!” or c) make update automatic when new ing added.
 
 ####Long
++ Allow ingredients to be removed or quantities to be updated (instead of adding new entry).
 + Look into drag and drop methods, test.
 + Get additional data needed
 +	a) co2 per kg of foods
