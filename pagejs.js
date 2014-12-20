@@ -90,6 +90,10 @@ var main = function() {
 		// show ingredient has been included:
 		$(this).toggleClass('active');
 
+		if ( !firstcalc ) {
+				$(".result").empty();
+		}
+
 		var quant_str = prompt("Please enter a quantity of " + this.id + " in g:", 0);
 
 		//var quant = parseInt(quant_str, 10); // no good if typo in input number
@@ -123,8 +127,6 @@ var main = function() {
 				firstcalc = false;
 			}
 			else {
-				//$('p.ems').replaceWith("<p class="ems">"Total emissions: " + totems + " kg"</p>");
-				$(".result").empty();
 				$('<p class="ems">').text("Total emissions: " + totems + " kg").appendTo('.result');
 			}
 		}
