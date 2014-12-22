@@ -101,7 +101,7 @@ var main = function() {
 
 		if ( typeof quant === 'number' && quant === quant ) {
   			// display ingredient on right
-  			$('<li>').text(this.id + " " + quant + " g").appendTo('.ings');
+  			$('<li>').text(this.id + ": " + quant + " g").appendTo('.ings');
 
   			// add ingredient and quantity to recipe array
   			recipe1.push( { ing: this.id, qug: quant} );
