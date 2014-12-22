@@ -5,8 +5,10 @@ foodprint-calc
 
 ## TODO
 ####Short
-+ make form take recipe name
++ Fix scrolling ‘About’ page
 + Add details to ‘About’ page.
++ make form take recipe name
+
 
 ####Long
 + Allow ingredients to be removed or quantities to be updated (instead of adding new entry).
