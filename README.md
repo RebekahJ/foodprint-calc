@@ -5,19 +5,22 @@ foodprint-calc
 
 ## TODO
 ####Short
-+ Fix scrolling ‘About’ page
-+ Add details to ‘About’ page.
-+ make form take recipe name
++ Fix footer placement
++ Round results to 2dp
++ Add remove (and edit?) buttons next to each ingredient in recipe list
++ Add form to take recipe name
 
 
 ####Long
-+ Allow ingredients to be removed or quantities to be updated (instead of adding new entry).
-+ Look into drag and drop methods, test.
++ Get some comparison info - display result + equivalent activities e.g. x mile car journey, hours of tv, boiled kettles
 + Get additional data needed
 +	a) co2 per kg of foods
 +	b) recipes (20 main, 20 lunch, 10 breakfast, 20 snacks, drinks?) and quantities
 + Need more comprehensive list of foods, and consistent data set e.g. transport etc left out, or appropriate to a specific location. 
-+ decide best system to store info so calculations will work - separate into food groups to make searches faster? Would speed up array searches but need to include method to tell function which food arrays to search based on recipe contents…
++ Add tabs for the 2 modes - meal detail and week/month detail
++ Design - look into drag and drop methods, test.
++ decide best system to store info so calculations will work - separate into food groups to make searches faster? Would speed up array searches (when ingredient choice is longer) but need to include method to tell function which food arrays to search based on recipe contents…
++ Make scrolling single page? About first, calc second, info/further reading last
 
 
 ## Design plans
@@ -36,5 +39,5 @@ foodprint-calc
 + [EWG Meat Eater’s Guide] (http://static.ewg.org/reports/2011/meateaters/pdf/methodology_ewg_meat_eaters_guide_to_health_and_climate_2011.pdf) Use UK value if given, average if not.
 
 ## Issues
-- do for my portion sizes for now?
+- week/month scale - do for my portion sizes for now?
 - seasonal/geography issues? i.e. include food miles or just focus on production emissions? Would make big difference to e.g. [rice](http://en.wikipedia.org/wiki/Rice#Production), [sugar](http://en.wikipedia.org/wiki/Sugarcane#Production)… For now, include transport, processing etc as can only get data with processing included. Future - needs to be location based… perhaps add property to food objects so can separate production costs (will also vary my technique though so location dependent too) and transport costs.
