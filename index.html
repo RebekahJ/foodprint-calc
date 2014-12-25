@@ -10,18 +10,23 @@
 
     <!-- BODY -->
 	<body background="./images/wood_back2b.jpg">
+		<div id="wrapper">
 
-	<div class="nav">
-    	<div class="container">
-        	<ul class="pull-left">
-          		<li>BASIC FOODPRINT CALCULATOR</li>
-        	</ul>
-        	<ul class="pull-right">
-                <li><a href="index.html">Home</a></li>
-          		<li><a href="about.html">About</a></li>
-        	</ul>
-      	</div>
-    </div>	
+			<div id="top">
+
+				<div class="nav">
+    				<div class="container">
+        			<ul class="pull-left">
+          				<li>BASIC FOODPRINT CALCULATOR</li>
+        			</ul>
+        			<ul class="pull-right">
+                		<li><a href="index.html">Home</a></li>
+          				<li><a href="about.html">About</a></li>
+        			</ul>
+      				</div>
+    			</div>	
+
+    		</div> <!-- top -->
 
 <!--
     <div class="instructions">
@@ -34,101 +39,110 @@
     </div>
 -->
 
- 	<div class="calculator">
- 		<div class="container">
+			<div id="content">
 
-            <div class="instructions">
-                <p>Select ingredients for your meal from the lists on the left. Add quantities in g when prompted. When your recipe is complete, click Go! to calculate the associated emissions.</p>
-            </div>
+ 				<div class="calculator">
+ 					<div class="container">
 
-  			<div class="row">
+            			<div class="instructions">
+                		<p>Select ingredients for your meal from the lists on the left. Add quantities in g when prompted. When your recipe is complete, click Go! to calculate the associated emissions.</p>
+            			</div>
 
-    			<div class="col-sm-6" style="background-color:#191970;">
-      				<h4>Select meal ingredients from lists below:</h4>
+  							<div class="row">
 
-      				<div class="ing-buttons">
-                		<div class="container">
-                		<p>Meats</p>
-                			<div class="btn-group btn-group-sm" role="group" aria-label="...">
-  								<button type="button" class="btn-ing btn btn-default" id="Beef">Beef</button>
-  								<button type="button" class="btn-ing btn btn-default" id="Lamb">Lamb</button>
-  								<button type="button" class="btn-ing btn btn-default" id="Pork">Pork</button>
-  								<button type="button" class="btn-ing btn btn-default" id="Turkey">Turkey</button>
-  								<button type="button" class="btn-ing btn btn-default" id="Chicken">Chicken</button>
-							</div>
-						<p>Fish</p>
-							<div class="btn-group btn-group-sm" role="group" aria-label="...">
-								<button type="button" class="btn-ing btn btn-default" id="Salmon (farmed)">Salmon (farmed)</button>
-								<button type="button" class="btn-ing btn btn-default" id="Tuna (canned)">Tuna (canned)</button>
-                			</div>
-                		<p>Dairy</p>
-							<div class="btn-group btn-group-sm" role="group" aria-label="...">
-								<button type="button" class="btn-ing btn btn-default" id="Cheese">Cheese</button>
-								<button type="button" class="btn-ing btn btn-default" id="Egg">Egg</button>
-								<button type="button" class="btn-ing btn btn-default" id="Yogurt">Yogurt</button>
-								<button type="button" class="btn-ing btn btn-default" id="Milk">Milk</button>
-                			</div>
-                		<p>Vegetables</p>
-                			<div class="btn-group btn-group-sm" role="group" aria-label="...">
-								<button type="button" class="btn-ing btn btn-default" id="Potatoes">Potatoes</button>
-								<button type="button" class="btn-ing btn btn-default" id="Broccoli">Broccoli</button>
-                			</div>
-                		<p>Fruits</p>
-                			<div class="btn-group btn-group-sm" role="group" aria-label="...">
-								<button type="button" class="btn-ing btn btn-default" id="Tomatoes">Tomatoes</button>
-                			</div>	
-               			<p>Grains</p>
-               				<div class="btn-group btn-group-sm" role="group" aria-label="...">
-								<button type="button" class="btn-ing btn btn-default" id="Rice">Rice</button>
-                			</div>	
-               			<p>Pulses</p>
-               				<div class="btn-group btn-group-sm" role="group" aria-label="...">
-								<button type="button" class="btn-ing btn btn-default" id="Dry beans">Dry beans</button>
-								<button type="button" class="btn-ing btn btn-default" id="Lentils">Lentils</button>
-               				</div>	
-               			<p>Nuts</p>
-               				<div class="btn-group btn-group-sm" role="group" aria-label="...">
-								<button type="button" class="btn-ing btn btn-default" id="Peanut butter">Peanut Butter</button>
-								<button type="button" class="btn-ing btn btn-default" id="Nuts">Nuts</button>
-               				</div>	
-               			<p>Misc protein</p>
-               				<div class="btn-group btn-group-sm" role="group" aria-label="...">
-								<button type="button" class="btn-ing btn btn-default" id="Tofu">Tofu</button>
-               				</div>
-               			<p></p>	
-                		</div>
-                	</div> <!--end ing button section-->
+    							<div class="col-sm-6" style="background-color:#191970;">
+      							<h4>Select meal ingredients from lists below:</h4>
 
-    			</div> <!--end column 1-->
+      								<div class="ing-buttons">
+                						<div class="container">
+                						<p>Meats</p>
+                							<div class="btn-group btn-group-sm" role="group" aria-label="...">
+  											<button type="button" class="btn-ing btn btn-default" id="Beef">Beef</button>
+  											<button type="button" class="btn-ing btn btn-default" id="Lamb">Lamb</button>
+  											<button type="button" class="btn-ing btn btn-default" id="Pork">Pork</button>
+  											<button type="button" class="btn-ing btn btn-default" id="Turkey">Turkey</button>
+  											<button type="button" class="btn-ing btn btn-default" id="Chicken">Chicken</button>
+											</div>
+										<p>Fish</p>
+											<div class="btn-group btn-group-sm" role="group" aria-label="...">
+											<button type="button" class="btn-ing btn btn-default" id="Salmon (farmed)">Salmon (farmed)</button>
+											<button type="button" class="btn-ing btn btn-default" id="Tuna (canned)">Tuna (canned)</button>
+                							</div>
+                						<p>Dairy</p>
+											<div class="btn-group btn-group-sm" role="group" aria-label="...">
+											<button type="button" class="btn-ing btn btn-default" id="Cheese">Cheese</button>
+											<button type="button" class="btn-ing btn btn-default" id="Egg">Egg</button>
+											<button type="button" class="btn-ing btn btn-default" id="Yogurt">Yogurt</button>
+											<button type="button" class="btn-ing btn btn-default" id="Milk">Milk</button>
+			                				</div>
+				                		<p>Vegetables</p>
+				                			<div class="btn-group btn-group-sm" role="group" aria-label="...">
+											<button type="button" class="btn-ing btn btn-default" id="Potatoes">Potatoes</button>
+											<button type="button" class="btn-ing btn btn-default" id="Broccoli">Broccoli</button>
+				                			</div>
+				                		<p>Fruits</p>
+				                			<div class="btn-group btn-group-sm" role="group" aria-label="...">
+											<button type="button" class="btn-ing btn btn-default" id="Tomatoes">Tomatoes</button>
+				                			</div>	
+				               			<p>Grains</p>
+				               				<div class="btn-group btn-group-sm" role="group" aria-label="...">
+											<button type="button" class="btn-ing btn btn-default" id="Rice">Rice</button>
+				                			</div>	
+				               			<p>Pulses</p>
+				               				<div class="btn-group btn-group-sm" role="group" aria-label="...">
+											<button type="button" class="btn-ing btn btn-default" id="Dry beans">Dry beans</button>
+											<button type="button" class="btn-ing btn btn-default" id="Lentils">Lentils</button>
+				               				</div>	
+				               			<p>Nuts</p>
+				               				<div class="btn-group btn-group-sm" role="group" aria-label="...">
+											<button type="button" class="btn-ing btn btn-default" id="Peanut butter">Peanut Butter</button>
+											<button type="button" class="btn-ing btn btn-default" id="Nuts">Nuts</button>
+				               				</div>	
+				               			<p>Misc protein</p>
+				               				<div class="btn-group btn-group-sm" role="group" aria-label="...">
+											<button type="button" class="btn-ing btn btn-default" id="Tofu">Tofu</button>
+				               				</div>
+               							<p></p>	
+                						</div>
+                					</div> <!--end ing-buttons -->
 
-    			<div class="col-sm-6" style="background-color:#008B8B;">
+    							</div> <!--end column 1-->
 
-      					<h4>Recipe contains: </h4>
-      					<div class="recipe">
-      						<ul class="ings">
-							</ul> 
-      					</div>
-      					<br>
+    							<div class="col-sm-6" style="background-color:#008B8B;">
 
-      					<button type="button" class="btn-go btn btn-default" id="calculate">Go!</button>
-      					<p></p>
+			      				<h4>Recipe contains: </h4>
+			      					<div class="recipe">
+			      					<ul class="ings">
+									</ul> 
+			      					</div>
+			      				<br>
 
-      					<div class="result">
-      					</div>
+			      				<button type="button" class="btn-go btn btn-default" id="calculate">Go!</button>
+			      				<p></p>
 
-    			</div> <!-- end column 2-->
+			      					<div class="result">
+			      					</div>
 
-        </div> <!-- end row -->
-  		</div>
-	</div> <!-- end calculator -->
+			    				</div> <!-- end column 2-->
 
-    <div id="footer">Copyright  ~  RJS  ~  2014</div>
+        					</div> <!-- end row -->
+
+  					</div> <!-- container -->
+				</div> <!-- end calculator -->
+
+			</div> <!-- content -->
+
+			<footer>
+				<p>Copyright &copy; <a href="https://github.com/RebekahJ">RebekahJ</a> 2014 </p>
+			</footer>
+    		<!--<div id="footer">Copyright  ~  RJS  ~  2014</div>-->
 
 	<!-- scripts -->
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script> -->
     <script src="jquery-2.1.1.min.js"></script>
 	<script src="pagejs.js"></script>
 
+		</div> <!-- wrapper -->
 	</body>
 
 </html>
