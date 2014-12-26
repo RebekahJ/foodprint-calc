@@ -100,8 +100,10 @@ var main = function() {
 		var quant = Number(quant_str); // Returns NaN if any non-numeric characters present
 
 		if ( typeof quant === 'number' && quant === quant ) {
+			var rem = $('<button/>');
   			// display ingredient on right
   			$('<li>').text(this.id + ": " + quant + " g").appendTo('.ings');
+  			$('.ings').append(rem);
 
   			// add ingredient and quantity to recipe array
   			recipe1.push( { ing: this.id, qug: quant} );
@@ -120,14 +122,15 @@ var main = function() {
 		else {
 			// calculate emissions:
 			var totems = emsCalc( recipe1 );
+			var totems_r = Math.round(totems*100)/100;
 
 			if ( firstcalc ) {
 				// print result
-				$('<p class="ems">').text("Total emissions: " + totems + " kg").appendTo('.result');
+				$('<p class="ems">').text("Total emissions: " + totems_r + " kg").appendTo('.result');
 				firstcalc = false;
 			}
 			else {
-				$('<p class="ems">').text("Total emissions: " + totems + " kg").appendTo('.result');
+				$('<p class="ems">').text("Total emissions: " + totems_r + " kg").appendTo('.result');
 			}
 		}
 
