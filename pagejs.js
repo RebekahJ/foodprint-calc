@@ -100,9 +100,9 @@ var main = function() {
 		var quant = Number(quant_str); // Returns NaN if any non-numeric characters present
 
 		if ( typeof quant === 'number' && quant === quant ) {
-			var rem = $('<button/>');
   			// display ingredient on right
   			$('<li>').text(this.id + ": " + quant + " g").appendTo('.ings');
+  			var rem = $('<button/>');
   			$('.ings').append(rem);
 
   			// add ingredient and quantity to recipe array

@@ -5,26 +5,24 @@ foodprint-calc
 
 ## TODO
 ####Short
-+ Fix footer placement
-+ Round results to 2dp
-+ Add remove (and edit?) buttons next to each ingredient in recipe list
-+ Add form to take recipe name
++ Get some comparison info. Display result in kg + equivalent activities e.g. 60W bulb burning for x mins, x mile car journey, hours of tv, boiled kettles…
++ Add remove/edit buttons next to ingredients in the recipe list
 
 
 ####Long
-+ Get some comparison info - display result + equivalent activities e.g. x mile car journey, hours of tv, boiled kettles
++ Add form to take recipe name
 + Get additional data needed
 +	a) co2 per kg of foods
 +	b) recipes (20 main, 20 lunch, 10 breakfast, 20 snacks, drinks?) and quantities
-+ Need more comprehensive list of foods, and consistent data set e.g. transport etc left out, or appropriate to a specific location. 
++ Need a more comprehensive list of foods, and consistent data set e.g. transport etc left out, or all data corresponding to the same country/region. 
 + Add tabs for the 2 modes - meal detail and week/month detail
-+ Design - look into drag and drop methods, test.
++ Design - look into drag and drop methods for ingredients, test.
 + decide best system to store info so calculations will work - separate into food groups to make searches faster? Would speed up array searches (when ingredient choice is longer) but need to include method to tell function which food arrays to search based on recipe contents…
 + Make scrolling single page? About first, calc second, info/further reading last
 
 
 ## Design plans
-+ Two modes? Could start with pre-designed meals and give option to go into more detail and make custom meals if interested to see where the differences in meal types come from… 
++ Two modes for 2 different levels of detail: 
 + 	a) Fine detail: Drag and drop ingredients from categorized menus on left onto empty plate icons on right. Can name each plate. Add quantities to each ingredient. Can line up plates an compare emissions.
 + 	b) Bigger scale: Pre-designed meals with calculated emissions on left. Drag plates into meal calendar / table to create weekly diets with total emissions displayed. Can create different diets (with different names) to compare.
 
