@@ -6,13 +6,14 @@ foodprint-calc
 ## TODO
 ####Short
 + Get some comparison info. Display result in kg + equivalent activities e.g. 60W bulb burning for x mins, x mile car journey, hours of tv, boiled kettles…
-+ Add remove/edit buttons next to ingredients in the recipe list
++ Add calories per serving, along with % of daily requirements for an average adult man/woman (needed to compare nutritional value of different meals). Need calorie data (easy to find online) and add cal object to data array for eat food type. Edit emsCalc (so only have to search ingredient and recipe arrays once) to calculate ems + cals at same time and return both. (Later extension - protein? Carbs? Important nutritional groups rather than just calories?).
++ Add remove/edit buttons next to ingredients in the recipe list.
 
 
 ####Long
 + Add form to take recipe name
 + Get additional data needed
-+	a) co2 per kg of foods
++	a) co2 and cals per kg of foods
 +	b) recipes (20 main, 20 lunch, 10 breakfast, 20 snacks, drinks?) and quantities
 + Need a more comprehensive list of foods, and consistent data set e.g. transport etc left out, or all data corresponding to the same country/region. 
 + Add tabs for the 2 modes - meal detail and week/month detail
@@ -33,8 +34,10 @@ foodprint-calc
 + [Food groups](http://fivepercent.us/2008/05/29/link-relative-climate-impact-of-red-meat-vs-other-food-types/)
 + Low carbon diet [wiki](http://en.wikipedia.org/wiki/Low_carbon_diet)
 
+
 ## Sources of data
 + [EWG Meat Eater’s Guide] (http://static.ewg.org/reports/2011/meateaters/pdf/methodology_ewg_meat_eaters_guide_to_health_and_climate_2011.pdf) Use UK value if given, average if not.
+
 
 ## Issues
 - week/month scale - do for my portion sizes for now?

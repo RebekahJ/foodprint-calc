@@ -54,6 +54,23 @@ function emsCalc( recipe ) {
 	return emtot;
 } // end calc function
 
+/**
+* FUNCTION: equCalc( emis )
+*	Gives equivalent activity
+*
+* @param {Number} emis - total emissions in kg per recipe serving, calculated by emsCalc
+* @returns {Number} quantity of chosen activity
+*/
+function equCalc( emis ) {
+	
+	var equtot = 0;
+
+	// need conversion factors
+
+	return equtot;
+} // end calc function
+
+
 
 /** EVENT HANDLERS **/
 
@@ -102,8 +119,10 @@ var main = function() {
 		if ( typeof quant === 'number' && quant === quant ) {
   			// display ingredient on right
   			$('<li>').text(this.id + ": " + quant + " g").appendTo('.ings');
-  			var rem = $('<button/>');
-  			$('.ings').append(rem);
+
+  			// remove button (finish)
+  			//var rem = $('<button/>');
+  			//$('.ings').append(rem);
 
   			// add ingredient and quantity to recipe array
   			recipe1.push( { ing: this.id, qug: quant} );
