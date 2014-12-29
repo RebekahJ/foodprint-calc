@@ -41,22 +41,22 @@ function emsCalc( recipe ) {
 			// if string matches, ing present in recipe, get carb contribution
 			if ( recipe[i].ing === data[j].food ) {
 				emtot += ( 0.001 * recipe[i].qug ) * data[j].epkg ;
-				break; // skip to next recipe ingredient once current has been matched
+				break; // skip to next recipe ingredient once current has been matched to data entry
 			}
 		} // end ing loop
 	} // end recipe loop
 
 	return emtot;
-} // end calc function
+}; // end calc function
 
 // recipe stores ingredients and quantities in g
 var rec1 = [];
-rec1.push( { ing: "chicken", qug: 100 } );
-rec1.push( { ing: "rice", qug: 75 } );
+rec1.push( { ing: "Chicken", qug: 100 } );
+rec1.push( { ing: "Rice", qug: 75 } );
 
 var rec2 = [];
-rec2.push( { ing: "cheese", qug: 50 } );
-rec2.push( { ing: "rice", qug: 75 } );
+rec2.push( { ing: "Cheese", qug: 50 } );
+rec2.push( { ing: "Rice", qug: 75 } );
 
 var ems1 = emsCalc( rec1 );
 var ems2 = emsCalc( rec2 );

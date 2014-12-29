@@ -6,9 +6,9 @@ foodprint-calc
 ## TODO
 ####Short
 + Get some comparison info. Display result in kg + equivalent activities e.g. 60W bulb burning for x mins, x mile car journey, hours of tv, boiled kettles…
-+ Add calories per serving, along with % of daily requirements for an average adult man/woman (needed to compare nutritional value of different meals). Need calorie data (easy to find online) and add cal object to data array for eat food type. Edit emsCalc (so only have to search ingredient and recipe arrays once) to calculate ems + cals at same time and return both. (Later extension - protein? Carbs? Important nutritional groups rather than just calories?).
++ With calories, give % of daily requirements for an average adult man/woman (needed to compare nutritional value of different meals). (Later extension - protein? Carbs? Important nutritional groups rather than just calories?).
 + Add remove/edit buttons next to ingredients in the recipe list.
-+ Change prompt when ingredient is clicked more than once
++ Change prompt when ingredient is clicked more than once.
 
 .
 ####Long

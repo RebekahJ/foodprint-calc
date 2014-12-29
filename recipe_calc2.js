@@ -30,8 +30,8 @@ data.push( { food: 'Lentils', epkg: 0.9, calpg: 1.16 } ); //boiled
 */
 function emsCalc( recipe ) {
 
-	var emtot = 0;
-		//caltot = 0;
+	var emtot = 0,
+		caltot = 0;
 
 	// loop over recipe entries
 	for ( var i = 0; i < recipe.length; i++ ) {
@@ -41,33 +41,32 @@ function emsCalc( recipe ) {
 
 			// if string matches, ing present in recipe, get carb contribution
 			if ( recipe[i].ing === data[j].food ) {
-				//emtot += ( 0.001 * recipe[i].qug ) * data[j].epkg ;
-				emtot += 5;
-				//caltot += recipe[i].qug * data[j].calpg;
+				emtot += ( 0.001 * recipe[i].qug ) * data[j].epkg ;
+				caltot += recipe[i].qug * data[j].calpg;
 				break; // skip to next recipe ingredient once current has been matched
 			}
 		} // end ing loop
 	} // end recipe loop
 
-	//return [ emtot, caltot ];
-	return emtot;
+	return [ emtot, caltot ];
 		
 }; // end calc function
 
 // recipe stores ingredients and quantities in g
 var rec1 = [];
-rec1.push( { ing: "chicken", qug: 100 } );
-rec1.push( { ing: "rice", qug: 75 } );
+rec1.push( { ing: "Chicken", qug: 100 } );
+rec1.push( { ing: "Rice", qug: 75 } );
 
 var rec2 = [];
-rec2.push( { ing: "cheese", qug: 50 } );
-rec2.push( { ing: "rice", qug: 75 } );
+rec2.push( { ing: "Cheese", qug: 50 } );
+rec2.push( { ing: "Rice", qug: 75 } );
 
 var ems1 = emsCalc( rec1 );
 var ems2 = emsCalc( rec2 );
 
-console.log( "rec1 total emissions in kg is: " + ems1 );
-console.log( "rec2 total emissions in kg is: " + ems2 );
-
+console.log( "rec1 total emissions in kg is: " + ems1[0] );
+console.log( "rec2 total emissions in kg is: " + ems2[0] );
+console.log( "rec1 cals is: " + ems1[1] );
+console.log( "rec2 cals is: " + ems2[1] );
 
 

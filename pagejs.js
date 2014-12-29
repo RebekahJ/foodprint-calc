@@ -29,14 +29,15 @@ data.push( { food: 'Lentils', epkg: 0.9, calpg: 1.16 } ); //boiled
 
 /**
 * FUNCTION: emsCalc( recipe )
-*	Calculates the emissions of a meal based on a recipe's ingredients
+*	Calculates the emissions and calories of a meal based on a recipe's ingredients
 *
 * @param {Array} recipe - array of objects { ing: {String}, qug: {Number} }
-* @returns {Object} emtot: emissions in kg, caltot: calories in recipe serving
+* @returns {Array} emtot: emissions in kg, caltot: calories in recipe serving
 */
 function emsCalc( recipe ) {
 	
-	var emtot = 0;
+	var emtot = 0,
+		caltot = 0;
 
 	// loop over recipe entries
 	for ( var i = 0; i < recipe.length; i++ ) {
@@ -46,13 +47,14 @@ function emsCalc( recipe ) {
 
 			// if string matches, ing present in recipe, get carb and cal contribution
 			if ( recipe[i].ing === data[j].food ) {
-				emtot += ( 0.001 * recipe[i].qug ) * data[j].epkg ;
+				emtot += ( 0.001 * recipe[i].qug ) * data[j].epkg;
+				caltot += recipe[i].qug * data[j].calpg;
 				break; // skip to next recipe ingredient once current has been matched
 			}
 		} // end ing loop
 	} // end recipe loop
 
-	return emtot;
+	return [ emtot, caltot ];
 } // end calc function
 
 /**
@@ -83,8 +85,8 @@ var main = function() {
 	// temp here until name form is working (then will happen in function on enter)
 	var recipe1 = [];
 
-/*
-	// get recipe name (FINISH!)
+	/*
+	// GET RECIPE NAME (FINISH!)
 	$(".get-name").keypress(function(event) {
 
 		// Create array and print instructions once recipe name has been entered (FIX!)
@@ -101,8 +103,9 @@ var main = function() {
         	$('<p>').text("Select ingredients for " + myrecipe + " from the list below and add quantities (in grams) when prompted:").appendTo(".instructions");
     	}
 	});
-*/
+	*/
 
+	// SELECT INGREDIENT BUTTON
 	$('.btn-ing').click(function() {
 
 		// show ingredient has been included:
@@ -134,6 +137,7 @@ var main = function() {
 
 	});
 
+	// GO! CALC EMS + CALS
 	$('.btn-go').click(function() {
 
 		if ( recipe1.length < 1 ) {
@@ -141,20 +145,19 @@ var main = function() {
 		}
 		else {
 			// calculate emissions:
-			var totems = emsCalc( recipe1 );
-			var totems_r = Math.round(totems*100)/100;
+			var tots = emsCalc( recipe1 );
+			var totems_r = Math.round(tots[0]*100)/100;
+			var totcals_r = Math.round(tots[1]*100)/100;
+
+			$('<p class="ems">').text("Total emissions: " + totems_r + " kg").appendTo('.result');
+			$('<p class="ems">').text("Total calories: " + totcals_r ).appendTo('.result');
 
 			if ( firstcalc ) {
-				// print result
-				$('<p class="ems">').text("Total emissions: " + totems_r + " kg").appendTo('.result');
 				firstcalc = false;
-			}
-			else {
-				$('<p class="ems">').text("Total emissions: " + totems_r + " kg").appendTo('.result');
 			}
 		}
 
-	})
+	});
 
 };
 
