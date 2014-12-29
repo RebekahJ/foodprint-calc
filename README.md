@@ -5,7 +5,7 @@ foodprint-calc
 
 ## TODO
 ####Short
-+ Get some comparison info. Display result in kg + equivalent activities e.g. 60W bulb burning for x mins, x mile car journey, hours of tv, boiled kettles…
++ Get some comparison emissions info. Display result in kg + equivalent activities e.g. 60W bulb burning for x mins, x mile car journey, hours of tv, boiled kettles…
 + With calories, give % of daily requirements for an average adult man/woman (needed to compare nutritional value of different meals). (Later extension - protein? Carbs? Important nutritional groups rather than just calories?).
 + Add remove/edit buttons next to ingredients in the recipe list.
 + Change prompt when ingredient is clicked more than once.
